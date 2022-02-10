@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ibb_zemin_app/core/init/theme/theme.dart';
 import 'package:ibb_zemin_app/features/widgets/arrow_card_widgets.dart';
 
+// ignore: must_be_immutable
 class BigCard extends StatelessWidget {
   Size size;
   String png;
-  BigCard({Key? key, required this.size, required this.png}) : super(key: key);
+  String title;
+  BigCard(
+      {Key? key, required this.size, required this.png, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,7 @@ class BigCard extends StatelessWidget {
                   height: size.height * 0.2,
                   width: size.width * 0.6,
                   decoration: BoxDecoration(
-                    color: Colors.amberAccent,
+                    color: Colors.transparent.withOpacity(0.5),
                     image: DecorationImage(
                       image: AssetImage(png),
                       fit: BoxFit.cover,
@@ -44,8 +48,7 @@ class BigCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Mindfluness for Stress',
-                  style: ThemeYellow().yellowTheme.textTheme.headline4),
+              Text(title, style: ThemeYellow().yellowTheme.textTheme.headline4),
               SizedBox(height: size.width / 100),
               Text('2 h 54 min',
                   style: ThemeYellow().yellowTheme.textTheme.bodyText2),
