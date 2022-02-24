@@ -31,7 +31,6 @@ class _ProfileViewState extends State<ProfileView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     actives = [_isActive3, _isActive5, _isActive10, _isActive15, _isActive20];
   }
@@ -135,11 +134,6 @@ class _ProfileViewState extends State<ProfileView> {
                     ),
                   ],
                 ),
-              ),
-              Container(
-                color: Colors.blue,
-                width: double.infinity,
-                height: 300.0,
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 0),

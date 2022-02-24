@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ibb_zemin_app/core/init/theme/theme.dart';
+import 'package:ibb_zemin_app/features/home/home_view.dart';
 import 'package:ibb_zemin_app/features/meditation/meditation_view.dart';
 import 'package:ibb_zemin_app/features/root/root_view.dart';
 import 'package:ibb_zemin_app/models/meditation_model.dart';
@@ -22,9 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: MeditationView(
-        medidationModel: m,
-      ),
+      home: RootView(),
       theme: ThemeYellow().yellowTheme,
     );
   }
